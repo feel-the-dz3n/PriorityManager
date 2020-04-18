@@ -34,7 +34,7 @@ VOID UnregisterHotkeys(HWND hWnd);
 VOID HandleHotkeys(HWND hWnd, int id);
 BOOL ForegroundSetPriority(DWORD dwPriorityClass);
 VOID NotifyPriorityChanged(LPCWSTR target, DWORD dwPriorityClass);
-VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, BOOL bGetLastError)
+VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, BOOL bGetLastError);
 BOOL ShowTrayBalloon(LPCWSTR info, LPCWSTR title, UINT timeout);
 
 void string_to_wstring(const std::string& src, std::wstring& dest);
