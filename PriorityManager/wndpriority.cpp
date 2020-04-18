@@ -35,7 +35,14 @@ BOOL ForegroundSetPriority(DWORD dwPriorityClass)
 
 	GetForegroundWindowOpenProcess(&hwnd, &hProcess);
 
-	if (!hProcess) return FALSE;
+	if (!hProcess)
+	{
+		TCHAR sWndText[1024];
+		GetWindowText(hwnd, sWndText, 1024);
+		NotifyPriorityChangeFailed(sWndText, dwPriorityClass, TRUE);
+
+		return FALSE;
+	}
 
 	result = SetPriorityClass(hProcess, dwPriorityClass);
 	
@@ -44,7 +51,9 @@ BOOL ForegroundSetPriority(DWORD dwPriorityClass)
 	if (GetModuleFileNameEx(hProcess, NULL, sMainModule, 1024)) 
 	{
 		PathStripPath(sMainModule);
-		NotifyPriorityChanged(sMainModule, dwPriorityClass);
+
+		if (result) NotifyPriorityChanged(sMainModule, dwPriorityClass);
+		else NotifyPriorityChangeFailed(sMainModule, dwPriorityClass, TRUE);
 	}
 
 	CloseHandle(hProcess);
