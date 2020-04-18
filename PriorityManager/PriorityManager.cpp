@@ -57,8 +57,12 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case IDOK:
                 MakeDialogVisible(hWnd, FALSE);
                 break;
+            case ID_MENU_EXIT:
             case IDCANCEL:
                 EndDialog(hWnd, 0);
+                break;
+            case ID_MENU_OPEN:
+                MakeDialogVisible(hWnd, TRUE);
                 break;
             default:
                 return 0;
