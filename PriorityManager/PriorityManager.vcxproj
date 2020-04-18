@@ -167,6 +167,7 @@
     </ClCompile>
     <ClCompile Include="PriorityManager.cpp" />
     <ClCompile Include="tray.cpp" />
+    <ClCompile Include="wndpriority.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PriorityManager.rc" />
