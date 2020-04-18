@@ -30,3 +30,17 @@ BOOL DestroyTrayIcon()
 {
 	return Shell_NotifyIcon(NIM_DELETE, &tnd);
 }
+
+VOID HandlePopupMenu(HWND hWnd, POINT point)
+{
+	HMENU hMenu;
+	HMENU hMenuTrackPopup;
+	LPWSTR pszIDMenu;
+
+	pszIDMenu = MAKEINTRESOURCE(IDR_TRAYMENU);
+	hMenu = LoadMenu(hInst, pszIDMenu);
+	if (!hMenu)  return;
+	hMenuTrackPopup = GetSubMenu(hMenu, 0);
+	TrackPopupMenu(hMenuTrackPopup, 0, point.x, point.y, 0, hWnd, NULL);
+	DestroyMenu(hMenu);
+}

@@ -37,6 +37,8 @@ BOOL MakeDialogVisible(HWND hWnd, BOOL visible)
 
 LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    POINT pt;
+
     switch (message)
     {
     case WM_INITDIALOG:
@@ -64,6 +66,20 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         }
     }
     break;
+    case WM_NOTIFYICONMSG:
+        switch (lParam)
+        {
+        case WM_LBUTTONUP:
+            MakeDialogVisible(hWnd, TRUE);
+            break;
+        case WM_RBUTTONDOWN:
+            GetCursorPos(&pt);
+            HandlePopupMenu(hWnd, pt);
+            break;
+        default:
+            break;
+        }
+        break;
     case WM_PAINT:
     {
         PAINTSTRUCT ps;

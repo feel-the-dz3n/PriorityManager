@@ -21,3 +21,4 @@ LRESULT CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
 BOOL MakeDialogVisible(HWND, BOOL);
 BOOL InitializeTrayIcon(HWND);
 BOOL DestroyTrayIcon();
+VOID HandlePopupMenu(HWND hWnd, POINT point);
