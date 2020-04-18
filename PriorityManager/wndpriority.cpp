@@ -38,7 +38,14 @@ BOOL ForegroundSetPriority(DWORD dwPriorityClass)
 	if (!hProcess) return FALSE;
 
 	result = SetPriorityClass(hProcess, dwPriorityClass);
-	// TODO: notify about changing
+	
+	// get main module name to notify
+	TCHAR sMainModule[1024];
+	if (GetModuleFileNameEx(hProcess, NULL, sMainModule, 1024)) 
+	{
+		PathStripPath(sMainModule);
+		NotifyPriorityChanged(sMainModule, dwPriorityClass);
+	}
 
 	CloseHandle(hProcess);
 

@@ -47,6 +47,12 @@
     <ClCompile Include="wndpriority.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="notifications.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="str.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PriorityManager.rc">

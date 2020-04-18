@@ -21,14 +21,10 @@ VOID HandleHotkeys(HWND hWnd, int id)
 {
     if (id == ID_HOTKEY_RAISEPRIORITY)
     {
-        BOOL bResult = ForegroundSetPriority(HIGH_PRIORITY_CLASS);
-        if (bResult) MessageBox(hWnd, L"Good", L"PM Raise Priority", 0);
-        else MessageBox(hWnd, L"Failed", L"PM Raise Priority", 0);
+        ForegroundSetPriority(HIGH_PRIORITY_CLASS);
     }
     else if (id == ID_HOTKEY_REDUCEPRIORITY)
     {
-        BOOL bResult = ForegroundSetPriority(NORMAL_PRIORITY_CLASS);
-        if (bResult) MessageBox(hWnd, L"Good", L"PM Reduce Priority", 0);
-        else MessageBox(hWnd, L"Failed", L"PM Reduce Priority", 0);
+        ForegroundSetPriority(NORMAL_PRIORITY_CLASS);
     }
 }
