@@ -10,8 +10,18 @@ LPCWSTR GetPriorityText(DWORD dwPriorityClass)
 {
 	switch (dwPriorityClass)
 	{
-		// TODO: add more types
-	default: return L"Unknown";
+	case ABOVE_NORMAL_PRIORITY_CLASS: return L"Above normal";
+	case BELOW_NORMAL_PRIORITY_CLASS: return L"Below normal";
+	case IDLE_PRIORITY_CLASS: return L"Idle";
+	case HIGH_PRIORITY_CLASS: return L"High";
+	case NORMAL_PRIORITY_CLASS: return L"Normal (default)";
+	case REALTIME_PRIORITY_CLASS: return L"Realtime (unsafe)";
+	default:
+	{
+		TCHAR buf[50];
+		swprintf_s(buf, L"Unknown (%d)", dwPriorityClass);
+		return buf;
+	}
 	}
 }
 
