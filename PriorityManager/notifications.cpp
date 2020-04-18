@@ -8,9 +8,9 @@
 
 LPCWSTR GetPriorityText(DWORD dwPriorityClass)
 {
-	switch (dwPriorityClass) 
+	switch (dwPriorityClass)
 	{
-	// TODO: add more types
+		// TODO: add more types
 	default: return L"Unknown";
 	}
 }
@@ -18,6 +18,6 @@ LPCWSTR GetPriorityText(DWORD dwPriorityClass)
 VOID NotifyPriorityChanged(LPCWSTR target, DWORD dwPriorityClass)
 {
 	TCHAR buf[1024];
-	swprintf_s(buf, L"Setting priority %s for %s.", GetPriorityText(dwPriorityClass), target);
-	MessageBox(NULL, buf, L"Priority Manager Test Notification", 0);
+	swprintf_s(buf, L"%s priority for %s", GetPriorityText(dwPriorityClass), target);
+	ShowTrayBalloon(buf, L"Priority Changed", 1500);
 }
