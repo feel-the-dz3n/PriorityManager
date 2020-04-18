@@ -22,3 +22,9 @@ BOOL MakeDialogVisible(HWND, BOOL);
 BOOL InitializeTrayIcon(HWND);
 BOOL DestroyTrayIcon();
 VOID HandlePopupMenu(HWND hWnd, POINT point);
+VOID RegisterHotkeys(HWND hWnd);
+VOID UnregisterHotkeys(HWND hWnd);
+VOID HandleHotkeys(HWND hWnd, int id);
+
+#define ID_HOTKEY_RAISEPRIORITY  1
+#define ID_HOTKEY_REDUCEPRIORITY 2
