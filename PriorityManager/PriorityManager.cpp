@@ -42,33 +42,39 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
+    case WM_INITDIALOG:
+    {
+        // TODO: add initialization code here
+        return 0;
+    }
+    break;
     case WM_COMMAND:
+    {
+        int wmId = LOWORD(wParam);
+        if (HIWORD(wParam) == BN_CLICKED) // parse button clicks
         {
-            int wmId = LOWORD(wParam);
-            if (HIWORD(wParam) == BN_CLICKED) // parse button clicks
+            switch (wmId)
             {
-                switch (wmId) 
-                {
-                case IDOK:
-                    MakeDialogVisible(hWnd, FALSE);
-                    break;
-                case IDCANCEL: 
-                    EndDialog(hWnd, 0);
-                    break;
-                default:
-                    return 0;
-                }
+            case IDOK:
+                MakeDialogVisible(hWnd, FALSE);
+                break;
+            case IDCANCEL:
+                EndDialog(hWnd, 0);
+                break;
+            default:
+                return 0;
             }
         }
-        break;
+    }
+    break;
     case WM_PAINT:
-        {
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
-            EndPaint(hWnd, &ps);
-        }
-        break;
+    {
+        PAINTSTRUCT ps;
+        HDC hdc = BeginPaint(hWnd, &ps);
+        // TODO: Add any drawing code that uses hdc here...
+        EndPaint(hWnd, &ps);
+    }
+    break;
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
