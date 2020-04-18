@@ -7,10 +7,7 @@
 
 #define MAX_LOADSTRING 100
 
-HINSTANCE hInst;                                // current instance
-
-LRESULT CALLBACK    DlgProc(HWND, UINT, WPARAM, LPARAM);
-BOOL                MakeDialogVisible(HWND, BOOL);
+HINSTANCE hInst;
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -44,7 +41,7 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_INITDIALOG:
     {
-        // TODO: add initialization code here
+        InitializeTrayIcon(hWnd);
         return 0;
     }
     break;
@@ -76,6 +73,7 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
     break;
     case WM_DESTROY:
+        DestroyTrayIcon();
         PostQuitMessage(0);
         break;
     default:
