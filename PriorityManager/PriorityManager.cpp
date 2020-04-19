@@ -84,7 +84,7 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             break;
         case WM_RBUTTONDOWN:
             GetCursorPos(&pt);
-            HandlePopupMenu(hWnd, pt);
+            HandleTrayPopupMenu(hWnd, pt);
             break;
         default:
             break;

@@ -152,10 +152,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="hotkeys.h" />
+    <ClInclude Include="notifications.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="priorities.h" />
     <ClInclude Include="PriorityManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tray.h" />
+    <ClInclude Include="wndpriority.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hotkeys.cpp" />
@@ -166,8 +171,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="priorities.cpp" />
     <ClCompile Include="PriorityManager.cpp" />
-    <ClCompile Include="str.cpp" />
     <ClCompile Include="tray.cpp" />
     <ClCompile Include="wndpriority.cpp" />
   </ItemGroup>

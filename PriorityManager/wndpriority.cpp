@@ -39,22 +39,58 @@ BOOL ForegroundSetPriority(DWORD dwPriorityClass)
 	{
 		TCHAR sWndText[1024];
 		GetWindowText(hwnd, sWndText, 1024);
-		NotifyPriorityChangeFailed(sWndText, dwPriorityClass, TRUE);
+		NotifyPriorityChangeFailed(sWndText, dwPriorityClass, NULL, TRUE);
 
 		return FALSE;
 	}
 
 	result = SetPriorityClass(hProcess, dwPriorityClass);
-	
+
 	// get main module name to notify
 	TCHAR sMainModule[1024];
-	if (GetModuleFileNameEx(hProcess, NULL, sMainModule, 1024)) 
+	if (GetModuleFileNameEx(hProcess, NULL, sMainModule, 1024))
 	{
 		PathStripPath(sMainModule);
 
 		if (result) NotifyPriorityChanged(sMainModule, dwPriorityClass);
-		else NotifyPriorityChangeFailed(sMainModule, dwPriorityClass, TRUE);
+		else NotifyPriorityChangeFailed(sMainModule, dwPriorityClass, NULL, TRUE);
 	}
+
+	CloseHandle(hProcess);
+
+	return result;
+}
+
+BOOL ForegroundIncreasePriority()
+{
+	DWORD dwCurrentPriority = ForegroundGetPriority();
+	DWORD dwNewPriority = GetNextPriority(dwCurrentPriority, TRUE);
+
+	return ForegroundSetPriority(dwNewPriority);
+}
+
+BOOL ForegroundDecreasePriority()
+{
+	DWORD dwCurrentPriority = ForegroundGetPriority();
+	DWORD dwNewPriority = GetPrevPriority(dwCurrentPriority, TRUE);
+
+	return ForegroundSetPriority(dwNewPriority);
+}
+
+DWORD ForegroundGetPriority()
+{
+	HWND hwnd;
+	HANDLE hProcess;
+	DWORD result;
+
+	GetForegroundWindowOpenProcess(&hwnd, &hProcess);
+
+	if (!hProcess)
+	{
+		return NULL;
+	}
+
+	result = GetPriorityClass(hProcess);
 
 	CloseHandle(hProcess);
 

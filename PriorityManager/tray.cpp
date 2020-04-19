@@ -41,7 +41,7 @@ BOOL DestroyTrayIcon()
 	return Shell_NotifyIcon(NIM_DELETE, &tnd);
 }
 
-VOID HandlePopupMenu(HWND hWnd, POINT point)
+VOID HandleTrayPopupMenu(HWND hWnd, POINT point)
 {
 	HMENU hMenu;
 	HMENU hMenuTrackPopup;

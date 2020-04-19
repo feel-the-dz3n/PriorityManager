@@ -21,10 +21,10 @@ VOID HandleHotkeys(HWND hWnd, int id)
 {
     if (id == ID_HOTKEY_RAISEPRIORITY)
     {
-        ForegroundSetPriority(HIGH_PRIORITY_CLASS);
+        ForegroundIncreasePriority();
     }
     else if (id == ID_HOTKEY_REDUCEPRIORITY)
     {
-        ForegroundSetPriority(NORMAL_PRIORITY_CLASS);
+        ForegroundDecreasePriority();
     }
 }

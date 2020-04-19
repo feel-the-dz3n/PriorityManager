@@ -6,25 +6,6 @@
 #include "PriorityManager.h"
 
 
-LPCWSTR GetPriorityText(DWORD dwPriorityClass)
-{
-	switch (dwPriorityClass)
-	{
-	case ABOVE_NORMAL_PRIORITY_CLASS: return L"Above normal";
-	case BELOW_NORMAL_PRIORITY_CLASS: return L"Below normal";
-	case IDLE_PRIORITY_CLASS: return L"Idle";
-	case HIGH_PRIORITY_CLASS: return L"High";
-	case NORMAL_PRIORITY_CLASS: return L"Normal (default)";
-	case REALTIME_PRIORITY_CLASS: return L"Realtime (unsafe)";
-	default:
-	{
-		TCHAR buf[50];
-		swprintf_s(buf, L"Unknown (%d)", dwPriorityClass);
-		return buf;
-	}
-	}
-}
-
 VOID NotifyPriorityChanged(LPCWSTR target, DWORD dwPriorityClass)
 {
 	TCHAR buf[1024];
@@ -32,7 +13,7 @@ VOID NotifyPriorityChanged(LPCWSTR target, DWORD dwPriorityClass)
 	ShowTrayBalloon(buf, L"Priority changed", 1500);
 }
 
-VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, BOOL bGetLastError)
+VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, LPCWSTR szErrorMessage, BOOL bGetLastError)
 {
 	TCHAR buf[1024];
 	swprintf_s(buf, L"Unable to set priority for %s.", target);
@@ -44,7 +25,12 @@ VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, BOOL bGet
 		FormatMessageW(FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
 			NULL, lastError, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
 			errorBuf, (sizeof(errorBuf) / sizeof(wchar_t)), NULL);
-		swprintf_s(buf, L"%s %s (code: %d).", buf, errorBuf, lastError); // Get error string here
+		swprintf_s(buf, L"%s %s (code: %d).", buf, errorBuf, lastError);
+	}
+
+	if (szErrorMessage)
+	{
+		swprintf_s(buf, L"%s %s", buf, szErrorMessage);
 	}
 
 	ShowTrayBalloon(buf, L"Failed to set priority", 1500);

@@ -30,6 +30,21 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="wndpriority.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="priorities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="notifications.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hotkeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PriorityManager.cpp">
@@ -50,7 +65,7 @@
     <ClCompile Include="notifications.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="str.cpp">
+    <ClCompile Include="priorities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
