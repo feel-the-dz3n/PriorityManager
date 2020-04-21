@@ -81,5 +81,8 @@
     <Image Include="PriorityManager.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="PriorityManager_HotBackground.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

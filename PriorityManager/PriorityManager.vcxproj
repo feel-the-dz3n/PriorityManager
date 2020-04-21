@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="PriorityManager.ico" />
+    <Image Include="PriorityManager_HotBackground.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
