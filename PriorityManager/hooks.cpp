@@ -6,12 +6,14 @@ void CALLBACK windowChangeHookCallback(HWINEVENTHOOK hook, DWORD event, HWND hwn
     LONG idObject, LONG idChild,
     DWORD dwEventThread, DWORD dwmsEventTime)
 {
+    HotForeWindowChangedCallback(hwnd);
 }
 
 void CALLBACK objectCreateHookCallback(HWINEVENTHOOK hook, DWORD event, HWND hwnd,
     LONG idObject, LONG idChild,
     DWORD dwEventThread, DWORD dwmsEventTime)
 {
+    // TODO: PriorityOnStartCallback()
 }
 
 VOID InitializeHooks()

@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="hooks.h" />
+    <ClInclude Include="hotforeground.h" />
     <ClInclude Include="hotkeys.h" />
     <ClInclude Include="notifications.h" />
     <ClInclude Include="pch.h" />
@@ -170,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hooks.cpp" />
+    <ClCompile Include="hotforeground.cpp" />
     <ClCompile Include="hotkeys.cpp" />
     <ClCompile Include="notifications.cpp" />
     <ClCompile Include="pch.cpp">

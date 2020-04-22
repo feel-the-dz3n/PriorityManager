@@ -30,3 +30,4 @@
 #include "notifications.h"
 #include "hooks.h"
 #include "services.h"
+#include "hotforeground.h"
