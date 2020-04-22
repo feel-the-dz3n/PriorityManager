@@ -54,6 +54,42 @@
     <ClInclude Include="hotforeground.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Dylib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Methods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Query.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Reflection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\Stats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\UTF8Terminal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\utils\debugbreak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CXFramework\utils\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="str.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PriorityManager.cpp">
@@ -84,6 +120,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hotforeground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="str.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

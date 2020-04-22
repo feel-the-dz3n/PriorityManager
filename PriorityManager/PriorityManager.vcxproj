@@ -155,6 +155,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CXFramework\Dylib.h" />
+    <ClInclude Include="CXFramework\Methods.h" />
+    <ClInclude Include="CXFramework\Object.h" />
+    <ClInclude Include="CXFramework\Query.h" />
+    <ClInclude Include="CXFramework\Reflection.h" />
+    <ClInclude Include="CXFramework\Stats.h" />
+    <ClInclude Include="CXFramework\String.h" />
+    <ClInclude Include="CXFramework\UTF8Terminal.h" />
+    <ClInclude Include="CXFramework\utils\debugbreak.h" />
+    <ClInclude Include="CXFramework\utils\json.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="hooks.h" />
     <ClInclude Include="hotforeground.h" />
@@ -165,6 +175,8 @@
     <ClInclude Include="PriorityManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="services.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="str.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tray.h" />
     <ClInclude Include="wndpriority.h" />
@@ -183,6 +195,8 @@
     <ClCompile Include="priorities.cpp" />
     <ClCompile Include="PriorityManager.cpp" />
     <ClCompile Include="services.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="str.cpp" />
     <ClCompile Include="tray.cpp" />
     <ClCompile Include="wndpriority.cpp" />
   </ItemGroup>

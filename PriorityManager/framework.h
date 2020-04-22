@@ -23,6 +23,8 @@
 #include <algorithm>
 #include <string>
 
+#include "str.h"
+#include "settings.h"
 #include "priorities.h"
 #include "tray.h"
 #include "wndpriority.h"
