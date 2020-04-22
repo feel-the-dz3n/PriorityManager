@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="hooks.h" />
     <ClInclude Include="hotkeys.h" />
     <ClInclude Include="notifications.h" />
     <ClInclude Include="pch.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="wndpriority.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="hooks.cpp" />
     <ClCompile Include="hotkeys.cpp" />
     <ClCompile Include="notifications.cpp" />
     <ClCompile Include="pch.cpp">

@@ -28,4 +28,5 @@
 #include "wndpriority.h"
 #include "hotkeys.h"
 #include "notifications.h"
+#include "hooks.h"
 #include "services.h"
