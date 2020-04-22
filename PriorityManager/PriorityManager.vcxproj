@@ -162,6 +162,7 @@
     <ClInclude Include="priorities.h" />
     <ClInclude Include="PriorityManager.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="services.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tray.h" />
     <ClInclude Include="wndpriority.h" />
@@ -177,6 +178,7 @@
     </ClCompile>
     <ClCompile Include="priorities.cpp" />
     <ClCompile Include="PriorityManager.cpp" />
+    <ClCompile Include="services.cpp" />
     <ClCompile Include="tray.cpp" />
     <ClCompile Include="wndpriority.cpp" />
   </ItemGroup>

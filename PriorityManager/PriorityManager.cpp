@@ -43,8 +43,7 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_INITDIALOG:
     {
-        InitializeTrayIcon(hWnd);
-        RegisterHotkeys(hWnd);
+        InitializeServices(hWnd);
         return 0;
     }
     break;
@@ -99,8 +98,7 @@ LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
     break;
     case WM_DESTROY:
-        DestroyTrayIcon();
-        UnregisterHotkeys(hWnd);
+        DestroyServices(hWnd);
         PostQuitMessage(0);
         break;
     default:
