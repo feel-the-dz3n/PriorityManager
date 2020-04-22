@@ -18,7 +18,7 @@ void Settings::Load()
 		std::wstring wname;
 		string_to_wstring(name.c_str(), wname);
 		RegQueryValueEx(hk, wname.c_str(), nullptr, nullptr, (BYTE*)&value, &dummy);
-		if (dummy != sizeof value) throw std::exception();
+		if (dummy != sizeof value) return;
 	} cxenum_end;
 
 	RegCloseKey(hk);

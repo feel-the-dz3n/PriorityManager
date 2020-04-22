@@ -169,6 +169,7 @@
     <ClInclude Include="hooks.h" />
     <ClInclude Include="hotforeground.h" />
     <ClInclude Include="hotkeys.h" />
+    <ClInclude Include="LiveIcon.h" />
     <ClInclude Include="notifications.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="priorities.h" />
@@ -185,6 +186,7 @@
     <ClCompile Include="hooks.cpp" />
     <ClCompile Include="hotforeground.cpp" />
     <ClCompile Include="hotkeys.cpp" />
+    <ClCompile Include="LiveIcon.cpp" />
     <ClCompile Include="notifications.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -204,6 +206,18 @@
     <ResourceCompile Include="PriorityManager.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_ABOVE_NORMAL.ico" />
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_BELOW_NORMAL.ico" />
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_HIGH.ico" />
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_IDLE.ico" />
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_NORMAL.ico" />
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_REALTIME.ico" />
+    <Image Include="HOTFORE_ABOVE_NORMAL.ico" />
+    <Image Include="HOTFORE_BELOW_NORMAL.ico" />
+    <Image Include="HOTFORE_HIGH.ico" />
+    <Image Include="HOTFORE_IDLE.ico" />
+    <Image Include="HOTFORE_NORMAL.ico" />
+    <Image Include="HOTFORE_REALTIME.ico" />
     <Image Include="PriorityManager.ico" />
     <Image Include="PriorityManager_HotBackground.ico" />
     <Image Include="small.ico" />

@@ -14,6 +14,19 @@
 #define IDR_TRAYMENU                    131
 #define IDI_ICON1                       132
 #define IDI_HOTFOREGROUND               132
+#define IDI_ICON2                       134
+#define IDI_                            134
+#define IDI_HOTFORE_ABOVE_NORMAL        134
+#define IDI_ICON3                       135
+#define IDI_HOTFORE_BELOW_NORMAL        135
+#define IDI_ICON4                       136
+#define IDI_HOTFORE_HIGH                136
+#define IDI_ICON5                       137
+#define IDI_HOTFORE_IDLE                137
+#define IDI_ICON6                       138
+#define IDI_HOTFORE_NORMAL              138
+#define IDI_ICON7                       139
+#define IDI_HOTFORE_REALTIME            139
 #define IDC_AUTORUNBTN                  1000
 #define ID_MENU_ITEM0                   32771
 #define ID_MENU_ITEM1                   32772
@@ -26,7 +39,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
-#define _APS_NEXT_RESOURCE_VALUE        133
+#define _APS_NEXT_RESOURCE_VALUE        140
 #define _APS_NEXT_COMMAND_VALUE         32775
 #define _APS_NEXT_CONTROL_VALUE         1001
 #define _APS_NEXT_SYMED_VALUE           110

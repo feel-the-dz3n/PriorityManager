@@ -7,6 +7,8 @@ struct Settings
 	BOOL EnableHotFore = FALSE;
 	BOOL EnableLiveIcon = TRUE;
 	BOOL EnableDefaultHotkeys = TRUE;
+	BOOL NotifyAboutChangingPriority = FALSE;
+	UINT NotifyAboutChangingPriorityTimeout = 1000;
 
 	static Settings& Instance();
 	void Load();
@@ -15,6 +17,8 @@ struct Settings
 	cxprops(Settings) (
 		property(EnableHotFore),
 		property(EnableLiveIcon),
-		property(EnableDefaultHotkeys)
+		property(EnableDefaultHotkeys),
+		property(NotifyAboutChangingPriority),
+		property(NotifyAboutChangingPriorityTimeout)
 		) cxprops_end;
 };

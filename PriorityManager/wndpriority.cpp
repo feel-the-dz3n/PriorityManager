@@ -52,7 +52,11 @@ BOOL ForegroundSetPriority(DWORD dwPriorityClass)
 	{
 		PathStripPath(sMainModule);
 
-		if (result) NotifyPriorityChanged(sMainModule, dwPriorityClass);
+		if (result) 
+		{
+			NotifyPriorityChanged(sMainModule, dwPriorityClass);
+			HandleLiveIcon(hwnd);
+		}
 		else NotifyPriorityChangeFailed(sMainModule, dwPriorityClass, NULL, TRUE);
 	}
 

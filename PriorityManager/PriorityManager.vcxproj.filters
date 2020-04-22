@@ -90,6 +90,9 @@
     <ClInclude Include="str.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LiveIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PriorityManager.cpp">
@@ -128,6 +131,9 @@
     <ClCompile Include="str.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LiveIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PriorityManager.rc">
@@ -142,6 +148,42 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="PriorityManager_HotBackground.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_ABOVE_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_BELOW_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_HIGH.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_IDLE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\yanet\Downloads\51a88af7d098201f2fa3eafe19ca844b\HOTFORE_REALTIME.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_ABOVE_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_BELOW_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_HIGH.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_IDLE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_NORMAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HOTFORE_REALTIME.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

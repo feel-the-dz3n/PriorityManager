@@ -7,6 +7,7 @@ void CALLBACK windowChangeHookCallback(HWINEVENTHOOK hook, DWORD event, HWND hwn
     DWORD dwEventThread, DWORD dwmsEventTime)
 {
     HotForeWindowChangedCallback(hwnd);
+    HandleLiveIcon(hwnd);
 }
 
 void CALLBACK objectCreateHookCallback(HWINEVENTHOOK hook, DWORD event, HWND hwnd,

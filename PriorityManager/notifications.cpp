@@ -8,9 +8,11 @@
 
 VOID NotifyPriorityChanged(LPCWSTR target, DWORD dwPriorityClass)
 {
+	if (!Settings::Instance().NotifyAboutChangingPriority) return;
+
 	TCHAR buf[1024];
 	swprintf_s(buf, L"%s priority for %s", GetPriorityText(dwPriorityClass), target);
-	ShowTrayBalloon(buf, L"Priority changed", 1500);
+	ShowTrayBalloon(buf, L"Priority changed", Settings::Instance().NotifyAboutChangingPriorityTimeout);
 }
 
 VOID NotifyPriorityChangeFailed(LPCWSTR target, DWORD dwPriorityClass, LPCWSTR szErrorMessage, BOOL bGetLastError)

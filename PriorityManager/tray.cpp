@@ -36,6 +36,13 @@ BOOL ShowTrayBalloon(LPCWSTR info, LPCWSTR title, UINT timeout)
 	return Shell_NotifyIcon(NIM_MODIFY, &tnd);
 }
 
+BOOL UpdateTrayIcon(HICON hIcon)
+{
+	tnd.uFlags = NIF_ICON;
+	tnd.hIcon = hIcon;
+	return Shell_NotifyIcon(NIM_MODIFY, &tnd);
+}
+
 BOOL DestroyTrayIcon()
 {
 	return Shell_NotifyIcon(NIM_DELETE, &tnd);

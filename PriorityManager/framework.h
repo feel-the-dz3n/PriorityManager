@@ -33,3 +33,4 @@
 #include "hooks.h"
 #include "services.h"
 #include "hotforeground.h"
+#include "LiveIcon.h"
