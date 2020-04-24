@@ -1,24 +1,25 @@
 #pragma once
 #include "pch.h"
 #include "CXFramework/Reflection.h"
+#include "Registry.h"
 
-struct Settings
+struct Settings : CX::Reflection::Reflected
 {
-	BOOL EnableHotFore = FALSE;
-	BOOL EnableLiveIcon = TRUE;
-	BOOL EnableDefaultHotkeys = TRUE;
-	BOOL NotifyAboutChangingPriority = FALSE;
-	UINT NotifyAboutChangingPriorityTimeout = 1000;
+	Settings() {
+		EnableHotFore = false;
+		EnableLiveIcon = true;
+		EnableDefaultHotkeys = true;
+		NotifyAboutChangingPriority = false;
+		NotifyAboutChangingPriorityTimeout = 1000;
+	}
+
+	Registry::Bool cxprop(EnableHotFore);
+	Registry::Bool cxprop(EnableLiveIcon);
+	Registry::Bool cxprop(EnableDefaultHotkeys);
+	Registry::Bool cxprop(NotifyAboutChangingPriority);
+	Registry::Dword cxprop(NotifyAboutChangingPriorityTimeout);
 
 	static Settings& Instance();
 	void Load();
 	void Save();
-
-	cxprops(Settings) (
-		property(EnableHotFore),
-		property(EnableLiveIcon),
-		property(EnableDefaultHotkeys),
-		property(NotifyAboutChangingPriority),
-		property(NotifyAboutChangingPriorityTimeout)
-		) cxprops_end;
 };

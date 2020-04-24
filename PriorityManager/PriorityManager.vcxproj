@@ -174,6 +174,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="priorities.h" />
     <ClInclude Include="PriorityManager.h" />
+    <ClInclude Include="Registry.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="services.h" />
     <ClInclude Include="settings.h" />
@@ -196,6 +197,7 @@
     </ClCompile>
     <ClCompile Include="priorities.cpp" />
     <ClCompile Include="PriorityManager.cpp" />
+    <ClCompile Include="Registry.cpp" />
     <ClCompile Include="services.cpp" />
     <ClCompile Include="settings.cpp" />
     <ClCompile Include="str.cpp" />
